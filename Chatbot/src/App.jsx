@@ -74,7 +74,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://chatbot-backend/dummy");
+      const response = await fetch("http://backend/dummy");
 
       // Check if the request was successful (status code 200-299)
       if (!response.ok) {
