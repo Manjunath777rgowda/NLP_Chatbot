@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  chatbot:
+    image: chatbot
+    build:
+      context: .
+      dockerfile: Frontend_Dockerfile
+    init: true
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+      - type: volume
+        target: /app/node_modules 
+      - type: bind
+        source: vite.config.js
+        target: /app/vite.config.js
+    networks:
+      - backend
+    ports:
+      - 5173:5173
+
+networks:
+  backend:
+    driver: bridge

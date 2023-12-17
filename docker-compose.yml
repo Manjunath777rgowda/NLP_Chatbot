@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  flaskapp:
+    build: FlaskApp/.
+    ports:
+      - 5000:5000
+  chatbot:
+    build: Chatbot/.
+    ports:
+      - 5173:5173
