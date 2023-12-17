@@ -20,7 +20,7 @@ services:
     
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: nginx-chatbot
     restart: always
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
