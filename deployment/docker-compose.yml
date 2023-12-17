@@ -6,13 +6,18 @@ services:
     container_name: chatbot-backend
     ports:
       - 5000:5000
+    networks:
+      - backend-network
+      
   frontend:
     build: ../Chatbot/.
     image: manjunath777rgowda/chatbot-frontend
     container_name: chatbot-frontend
     ports:
       - 5173:5173
-  
+    networks:
+      - frontend-network
+    
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -22,3 +27,12 @@ services:
       - ./www:/data/www
     ports:
       - 80:80
+    networks:
+      - frontend-network
+      - backend-network
+
+networks:
+  frontend-network:
+    driver: bridge
+  backend-network:
+    driver: bridge
