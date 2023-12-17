@@ -7,7 +7,7 @@ services:
     ports:
       - 5000:5000
     networks:
-      - backend-network
+      - chatbot-network
       
   frontend:
     build: ../Chatbot/.
@@ -16,8 +16,7 @@ services:
     ports:
       - 5173:5173
     networks:
-      - frontend-network
-      - backend-network
+      - chatbot-network
     
   nginx:
     image: nginx:latest
@@ -29,11 +28,8 @@ services:
     ports:
       - 80:80
     networks:
-      - frontend-network
-      - backend-network
+      - chatbot-network
 
 networks:
-  frontend-network:
-    driver: bridge
-  backend-network:
+  chatbot-network:
     driver: bridge
