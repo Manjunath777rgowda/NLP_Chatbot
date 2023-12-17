@@ -39,4 +39,7 @@ docker compose up -d
 
 ## Model Development
 - NLP Model is developed using the Google Colab and detailed explanation and the development steps is explained in the .ipynb file
+- [.ipynb File](./Others/Chatbot_NLP_Industrial+Safety.ipynb)
+- [Report File](./Others/Chatbot_NLP_Industrial+Safety_Interim+Report.pdf)
+
 
