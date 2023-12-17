@@ -1,10 +1,14 @@
 version: "3.9"
 services:
-  flaskapp:
+  backend:
     build: FlaskApp/.
+    image: manjunath777rgowda/chatbot-backend
+    container_name: chatbot-backend
     ports:
       - 5000:5000
-  chatbot:
+  frontend:
     build: Chatbot/.
+    image: manjunath777rgowda/chatbot-frontend
+    container_name: chatbot-frontend
     ports:
       - 5173:5173
