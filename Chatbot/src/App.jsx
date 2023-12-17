@@ -74,7 +74,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:5000/dummy");
+      const response = await fetch("http://http://nped1uuxr.cloudloka.com/api");
 
       // Check if the request was successful (status code 200-299)
       if (!response.ok) {
